@@ -265,7 +265,8 @@ def handle():
         message = roll_the_dice(stuff=parsed)
     elif command == u'/halp':
         message = "bro use /dank for all, /mank for imgur, /jank for giphy, /bank for bing" \
-                  " /gank for goog, /roll for roll, /cards for cards againt humanity"
+                  " /gank for goog, /roll for roll, /define for urban dictionary" \
+                  "/cards for cards againt humanity"
     elif command == u'/attack':
         message = battle.handler(command, parsed, derp)
     elif command == u'/block':
