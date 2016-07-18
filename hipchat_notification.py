@@ -17,7 +17,6 @@ def text_image_card_notification(message, word, image_url, link_url=None):
         url = image_url
 
     return {
-        "message": message,
         "message_format": "html",
         "notify": False,
         "card": {
@@ -34,7 +33,9 @@ def text_image_card_notification(message, word, image_url, link_url=None):
                 "width": 1193,
                 "height": 564
             }
-        }
+
+        },
+        "message": message
     }
 
 

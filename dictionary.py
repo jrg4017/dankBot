@@ -46,13 +46,21 @@ def get_definitions(word):
 def total_definitions(define, room_id):
     definitions = get_definitions(define)
 
+    total = 0
+
     # sends individual cards via post
-    for definition in definitions:
-        url = hipchat.search_all(search=define)
-        json_str = text_image_card_notification(message=definition, word=define, image_url=url)
-        send_room_post_response(data=json_str, room_id=room_id)
+    for i in range(0, 2):
+        try:
+            url = hipchat.search_all(search=define)
+            json_str = text_image_card_notification(message=definitions[i], word=define, image_url=url)
+            send_room_post_response(data=json_str, room_id=room_id)
+            total + 1
+        except IndexError:
+            break
 
     if len(definitions) > 0:
-        return str(len(definitions)) + ' total definition(s) found for ' + define
+        return str(total) + ' out of ' + str(len(definitions)) + ' definitions.'
+    else:
+        return 'No definitions found for ' + define
 
     return ''

@@ -303,7 +303,7 @@ def index():
     "dankBot for hipchat by @gelstudios<br>"
     "<br>"
     "The dankest bot in all the land.<br>"
-    "Implements handlers: /dank for imgur, /jank for giphy, /gank for google, /halp for help<br>"
+    "Implements handlers: /dank for imgur, /jank for giphy, /gank for google, /define for urban dictionary, /halp for help<br>"
     "To install use this as the integration URL: <pre>http://imgur-hipchat.herokuapp.com/capabilities.json</pre><br>"
     "TODO: make api keys easier to manage, implement google_search() handler"
     "</body></html>")
